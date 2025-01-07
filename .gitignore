@@ -1,0 +1,27 @@
+Copy# Dependencies
+node_modules
+dist
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+
+# Environment
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
