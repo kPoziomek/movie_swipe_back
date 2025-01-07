@@ -8,10 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      'https://movie-swipe-front-k4kc52p8p.vercel.app',
-      'http://localhost:5173'
-    ],
+    origin: "*",
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
