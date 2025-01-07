@@ -8,19 +8,19 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://movie-swipe-front-co8ccl3f6.vercel.app", "http://localhost:5173"],
+    origin: [
+      'https://movie-swipe-front-k4kc52p8p.vercel.app',
+      'http://localhost:5173'
+    ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
 app.use(express.json());
 app.use(mockUserMiddleware);
 app.use(express.urlencoded({ extended: true }));
 
-// Debug middleware
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
 
 app.use("/api/movies", movieRoutes);
 app.use("/api/users", userRoutes);
