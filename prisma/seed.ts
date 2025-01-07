@@ -196,8 +196,6 @@ async function main() {
         rating: 8.0,
       },
     ],
-    // @ts-ignore
-    skipDuplicates: true,
   })
 }
 
